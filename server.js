@@ -55,11 +55,8 @@ app.get('/api/coins', async (req, res) => {
 		
 		// Extract the symbols parameter and split it into an array
 		const symbolsParam = req.query.symbols; // E.g., 'btc,eth'
-		const symbols_to_lowercase = symbolsParam ? symbolsParam.split(',').map(symbol => symbol.toLowerCase()) : []; 
-		console.log("Symbols to lower case: ", symbols_to_lowercase)
-		const symbols = symbols_to_lowercase ? symbols_to_lowercase.split(',') : []; 
-
-		console.log('symbols param: '+symbols)
+		const symbols = symbolsParam ? symbolsParam.split(',').map(symbol => symbol.toLowerCase()) : []; 
+		console.log("Symbols to lower case: ", symbols)
 		
 		// get all the coin data from mongodb
 		const coins = await Coin.find(); 
