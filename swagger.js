@@ -21,7 +21,7 @@ const swaggerDefinition = {
     **Algorithm for fetching the required data:**
     1. Listen to the server.
     2. Connect to MongoDB Atlas cluster.
-    3. Make a request through Swagger to the endpoint `/api/coins`.
+    3. Make a request through Swagger to the endpoint /api/coins.
     4. Fetch data from https://api.coingecko.com/api/v3/coins/list (an entire list of all coins).
     5. Prevent uppercase entries in the parameters.
     6. Read coin data from MongoDB Atlas.
