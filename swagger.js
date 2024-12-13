@@ -4,15 +4,10 @@ const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerDefinition = {
   openapi: '3.0.0',
   info: {
-    title: 'My API',
+    title: 'ChainMyne Challenge 2',
     version: '1.0.0',
     description: 'API documentation for my Node.js app',
-  },
-  servers: [
-    {
-      url: 'http://localhost:5000',
-    },
-  ],
+  }
 };
 
 // Options for Swagger JSDoc
