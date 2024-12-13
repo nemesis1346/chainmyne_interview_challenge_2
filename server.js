@@ -105,6 +105,7 @@ app.get('/api/coins', async (req, res) => {
 // Start the server
 app.listen(port, async () => {
 	// Connect to MongoDB
+	console.log('Attempting to connect to mongo uri: '+mongoURI)
 	await mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 	console.log('MongoDB connected')
 	
