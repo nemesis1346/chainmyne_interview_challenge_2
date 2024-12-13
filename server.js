@@ -55,7 +55,8 @@ app.get('/api/coins', async (req, res) => {
 		
 		// Extract the symbols parameter and split it into an array
 		const symbolsParam = req.query.symbols; // E.g., 'btc,eth'
-		const symbols = symbolsParam ? symbolsParam.split(',') : []; 
+		const symbols_to_lowercase = symbolsParam ? symbolsParam.split(',').map(symbol => symbol.toLowerCase()) : []; 
+		const symbols = symbols_to_lowercase ? symbols_to_lowercase.split(',') : []; 
 
 		console.log('symbols param: '+symbols)
 		
@@ -76,7 +77,7 @@ app.get('/api/coins', async (req, res) => {
 			return res.status(404).json({ message: 'No matching coins found for the provided symbols' });
 		}
 
-		let ids_param = filteredCoinsParam.map(coin_param => coin_param.id.toLowerCase()).join(',');
+		let ids_param = filteredCoinsParam.map(coin_param => coin_param.id).join(',');
 
 		console.log('ids param: ',ids_param)
 		
