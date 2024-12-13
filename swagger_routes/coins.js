@@ -3,7 +3,7 @@
  * /api/coins:
  *   get:
  *     summary: Get list of coins
- *     description: Fetches coins from MongoDB and optionally filters by provided symbols.
+ *     description: Fetches coin market data from CoinGecko by symbol string array.
  *     parameters:
  *       - in: query
  *         name: symbols
