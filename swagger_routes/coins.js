@@ -3,7 +3,14 @@
  * /api/coins:
  *   get:
  *     summary: Get list of coins
- *     description: Fetches coins from an external API and returns the data
+ *     description: Fetches coins from MongoDB and optionally filters by provided symbols.
+ *     parameters:
+ *       - in: query
+ *         name: symbols
+ *         schema:
+ *           type: string
+ *         description: Comma-separated list of symbols to filter by (e.g., "btc,eth").
+ *         required: false
  *     responses:
  *       200:
  *         description: A list of coins
@@ -22,4 +29,10 @@
  *                     type: string
  *                   current_price:
  *                     type: number
+ *                   market_cap:
+ *                     type: number
+ *       404:
+ *         description: No matching coins found
+ *       500:
+ *         description: Internal server error
  */
