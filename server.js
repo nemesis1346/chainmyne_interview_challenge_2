@@ -52,6 +52,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Example API route
 app.get('/api/coins', async (req, res) => {
 	try {
+		//fetch latest coin data info
+		await fetchDataFromCoinGecko()
 		
 		// Extract the symbols parameter and split it into an array
 		const symbolsParam = req.query.symbols; // E.g., 'btc,eth'
@@ -113,6 +115,5 @@ app.listen(port, async () => {
 		})
 	console.log('MongoDB connected')
 	
-	await fetchDataFromCoinGecko()
 	console.log(`Server running at http://localhost:${port}`);
 });
