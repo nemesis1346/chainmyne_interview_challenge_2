@@ -76,7 +76,7 @@ app.get('/api/coins', async (req, res) => {
 			return res.status(404).json({ message: 'No matching coins found for the provided symbols' });
 		}
 
-		let ids_param = filteredCoinsParam.map(coin_param => coin_param.id).join(',');
+		let ids_param = filteredCoinsParam.map(coin_param => coin_param.id.toLowerCase()).join(',');
 
 		console.log('ids param: ',ids_param)
 		
