@@ -8,9 +8,6 @@ const swaggerDefinition = {
     version: '1.0.0',
     description: `For this challenge, I created a Node.js server that calls an Axios request to the CoinGecko API to fetch the information required.
 
-    The server app is running at the following URL:
-    https://coingecko-swagger-605be96ad247.herokuapp.com/api-docs/#/default/get_api_coins
-
     **Features:**
     - It runs with Swagger UI so anyone can interact with the API endpoint for the coins.
     - It runs in a Heroku app.
