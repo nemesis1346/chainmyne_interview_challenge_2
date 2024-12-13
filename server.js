@@ -12,7 +12,7 @@ const port = process.env.PORT || 5000;
 
 // MongoDB connection string (replace with your actual connection string)
 // const mongoURI = 'mongodb://localhost:27017/coins_db';  // for use locally DB
-const mongoURI = "mongodb+srv://marcomaigua1346:"+process.env.MONGO_DB_ATLAS+"@cluster0.a99up.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const mongoURI = "mongodb+srv://marcomaigua1346:"+process.env.MONGO_DB_ATLAS+"@cluster0.a99up.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tls=true";
 
 const fetchDataFromCoinGecko = async () => {
 	try {
