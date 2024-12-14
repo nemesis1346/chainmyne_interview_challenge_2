@@ -29,3 +29,11 @@ https://coingecko-swagger-605be96ad247.herokuapp.com/api-docs/#/default/get_api_
 7. based on the input params, filter out the entire list of coins from mongo db so we have access to the symbol property
 8. do an axios callt o https://api.coingecko.com/api/v3/coins/markets with the processes coin IDs
 9. filter unnecesary attributes and present to the user
+
+### If you want to run the project locally:
+
+nvm use 18.20.0
+npm install
+node server.js
+
+check the browse locaohost:5000
